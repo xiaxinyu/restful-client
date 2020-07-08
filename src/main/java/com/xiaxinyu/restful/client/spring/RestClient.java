@@ -1,8 +1,8 @@
-package org.learning.restclient.core;
+package com.xiaxinyu.restful.client.spring;
 
 import java.nio.charset.Charset;
 
-import org.learning.restclient.exception.RestServiceException;
+import com.xiaxinyu.restful.client.exception.RestServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;

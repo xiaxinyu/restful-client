@@ -1,4 +1,4 @@
-package org.learning.restclient.core;
+package com.xiaxinyu.restful.client.spring;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

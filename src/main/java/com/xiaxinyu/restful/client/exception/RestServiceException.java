@@ -1,4 +1,4 @@
-package org.learning.restclient.exception;
+package com.xiaxinyu.restful.client.exception;
 
 import org.springframework.http.HttpStatus;
 
