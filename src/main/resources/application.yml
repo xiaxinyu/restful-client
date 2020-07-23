@@ -1,4 +1,4 @@
-sit-host: http://xxxxxx
+sit-host: http://gateway.steamsit.crcloud.com
 
 restful:
   steam-notify:
