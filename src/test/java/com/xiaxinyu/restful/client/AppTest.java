@@ -1,4 +1,4 @@
-package org.learning.restclient;
+package com.xiaxinyu.restful.client;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -11,11 +11,15 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.StringHttpMessageConverter;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 
-@Service
+/**
+ * @author XIAXINYU3
+ * @date 2020.7.20
+ */
+@Component
 public class RestClient {
     protected final Logger logger = LoggerFactory.getLogger(RestClient.class);
 

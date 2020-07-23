@@ -1,0 +1,6 @@
+sit-host: http://xxxxxx
+
+restful:
+  steam-notify:
+    route: ${sit-host}/steam-notify
+    token: ea793086-bd17-4397-b09d-dd4d57bbe39a
