@@ -5,6 +5,7 @@ import java.nio.charset.Charset;
 import com.xiaxinyu.restful.client.exception.RestServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -23,13 +24,9 @@ import org.springframework.web.client.RestTemplate;
 public class RestClient {
     protected final Logger logger = LoggerFactory.getLogger(RestClient.class);
 
-    protected RestTemplate rest;
-    
-    public RestClient() {
-        rest = new RestTemplate();
-        rest.getMessageConverters().add(0, new StringHttpMessageConverter(Charset.forName("UTF-8")));
-    }
-    
+    @Autowired
+    RestTemplate rest;
+
     public <T> T get(String url, Class<T> clazz) throws RestServiceException {
         return get(url, null, clazz);
     }
@@ -68,7 +65,7 @@ public class RestClient {
         }
         return responseEntity.getBody();
     }
-    
+
     public <T> ResponseEntity<T> postForEntity(String url, HttpHeaders headers, Object request, Class<T> clazz)
             throws RestServiceException {
         HttpEntity<Object> requestEntity = new HttpEntity<Object>(request, headers);
