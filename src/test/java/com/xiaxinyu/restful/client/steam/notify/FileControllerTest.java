@@ -3,6 +3,7 @@ package com.xiaxinyu.restful.client.steam.notify;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.xiaxinyu.restful.client.common.JSONUtils;
 import com.xiaxinyu.restful.client.exception.RestServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -45,7 +46,7 @@ public class FileControllerTest extends SteamNotifyBase {
         HttpEntity<MultiValueMap<String, Object>> param = new HttpEntity<>(form, headers);
 
         // 调用接口即可
-        String url = String.format("%s%s", host, "/v1/notices/files");
+        String url = String.format("%s%s", host, "/v1/notices/files/single");
         String response = restTemplate.postForObject(url, param, String.class);
         log.info("response={}", response);
 
@@ -56,7 +57,8 @@ public class FileControllerTest extends SteamNotifyBase {
                 SerializerFeature.WriteDateUseDateFormat);
 
         log.info(pretty);
+
+        //验证结果
+        Assert.assertTrue(JSONUtils.isSuccess(jsonObject));
     }
-
-
 }
