@@ -1,4 +1,4 @@
-package com.xiaxinyu.restful.client.steam.notify;
+package com.xiaxinyu.restful.client.stranger.notify;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

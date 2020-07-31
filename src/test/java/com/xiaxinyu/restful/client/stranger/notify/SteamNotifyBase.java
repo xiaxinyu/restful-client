@@ -1,4 +1,4 @@
-package com.xiaxinyu.restful.client.steam.notify;
+package com.xiaxinyu.restful.client.stranger.notify;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
