@@ -22,7 +22,7 @@ public class HomeTest {
     @Autowired
     RestClient restClient;
 
-    private String host = "api.steamuat.crcloud.com";
+    private String host = "xxxxxx";
 
     @Test
     public void test_add_visitor() throws RestServiceException {
@@ -31,13 +31,13 @@ public class HomeTest {
         int salt = new Random().nextInt();
 
         Map<String, Object> params = new HashMap<>();
-        params.put("companyName", "crc" + salt);
+        params.put("companyName", "xxx" + salt);
         params.put("companySize", "20人及以下");
-        params.put("email", "crc@crc.com.hk");
-        params.put("industry", "crc" + salt);
+        params.put("email", "xxx@xxx.com");
+        params.put("industry", "xxx" + salt);
         params.put("phone", "12345678996");
-        params.put("source", "wechat_crcloud");
-        params.put("userName", "crc" + salt);
+        params.put("source", "wechat_xxxloud");
+        params.put("userName", "xxx" + salt);
         params.put("versionName", "申请试用免费版");
 
         String response = restClient.post(url, params, String.class);
