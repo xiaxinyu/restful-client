@@ -20,7 +20,7 @@ public class OpenAPIOAuthTest {
 
     @Test
     public void testGetToken() throws RestServiceException {
-        String url = String.format("http://api.steamuat.crcloud.com/oauth/oauth/token?grant_type=%s&client_id=%s&client_secret=%s", "client_credentials", "xman", "1127KoKo");
+        String url = String.format("http://xxxxxx/oauth/oauth/token?grant_type=%s&client_id=%s&client_secret=%s", "client_credentials", "xman", "1127KoKo");
 
         String response = restClient.post(url, null, String.class);
         log.info("response={}", response);
